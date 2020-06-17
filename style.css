@@ -1,0 +1,62 @@
+html,
+body {
+    background: linear-gradient(blue, pink);
+    text-align: center;
+    height: 100%;
+    overflow: auto;
+}
+
+.svg-wrapper {
+    position: relative;
+    top: 20%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    width: 520px;
+    text-align: center;
+}
+
+.shape {
+    stroke-dasharray: 0 580;
+    stroke-dashoffset: 580;
+    stroke-width: 4px;
+    fill: transparent;
+    stroke: #fefefe;
+    border-bottom: 6px solid black;
+    transition: stroke-width 4.7s, stroke-dashoffset 4.2s, stroke-dasharray 5.3s;
+    transition-delay: 0.3s;
+    fill: rgb(20, 20, 90);
+}
+
+.text {
+    font-family: "David Libre";
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    color: gold;
+    top: -48px;
+    position: relative;
+    text-align: center;
+    height: 40px;
+    width: 420px;
+    font-variant: small-caps;
+}
+
+.shape-border {
+    stroke-width: 4px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 480 100;
+}
+
+.text1 {
+    font-family: "David Libre";
+    font-size: 30px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    color: gold;
+    top: -48px;
+    position: relative;
+    text-align: center;
+    height: 40px;
+    width: 420px;
+    font-variant: small-caps;
+}
