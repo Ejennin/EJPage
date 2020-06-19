@@ -66,10 +66,10 @@
         width: 110%;
     }
     
-    #bold ul {
+    nav ul {
         margin: 0;
         padding: 0;
-        list-style-type: upper-alpha;
+        list-style-type: none;
         text-align: left;
     }
     
