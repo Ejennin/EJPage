@@ -68,7 +68,7 @@
     
     nav ul {
         margin: 0;
-        padding: 0;
+        padding: .3em 5em;
         list-style-type: none;
         text-align: left;
     }
