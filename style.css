@@ -1,6 +1,6 @@
     html,
     body {
-        background: linear-gradient(blue, pink);
+        background: linear-gradient(rgb(196, 196, 250), pink);
         text-align: center;
         height: 100%;
         overflow: auto;
@@ -32,7 +32,7 @@
         font-size: 20px;
         line-height: 22px;
         letter-spacing: 1px;
-        color: gold;
+        color: rgb(39, 38, 30);
         top: -48px;
         position: relative;
         text-align: center;
@@ -78,5 +78,14 @@
     }
     
     nav li {
+        list-style-type: none;
+    }
+    
+    a {
+        color: #909294;
+        text-decoration: none;
+    }
+    
+    ul {
         list-style-type: none;
     }
