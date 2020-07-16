@@ -32,7 +32,7 @@
         font-size: 20px;
         line-height: 22px;
         letter-spacing: 1px;
-        color: rgb(39, 38, 30);
+        color: rgb(0, 0, 0);
         top: -48px;
         position: relative;
         text-align: center;
@@ -82,10 +82,20 @@
     }
     
     a {
-        color: #909294;
+        color: #5e5f61;
         text-decoration: none;
     }
     
     ul {
         list-style-type: none;
+    }
+    
+    .row {
+        padding-top: 2%;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
     }
