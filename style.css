@@ -80,3 +80,12 @@
     nav li {
         list-style-type: none;
     }
+    
+    a {
+        color: #909294;
+        text-decoration: none;
+    }
+    
+    ul {
+        list-style-type: none;
+    }
