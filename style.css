@@ -36,8 +36,6 @@
         top: -48px;
         position: relative;
         text-align: center;
-        height: 40px;
-        width: 420px;
         font-variant: small-caps;
     }
     
@@ -98,4 +96,10 @@
         flex-wrap: wrap;
         margin-right: -15px;
         margin-left: -15px;
+    }
+    
+    .container.flow-text {
+        width: fit-content;
+        padding-right: 5vw;
+        padding-left: 5vw;
     }
