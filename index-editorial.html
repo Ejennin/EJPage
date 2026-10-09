@@ -14,14 +14,16 @@ a{color:inherit}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
 header{border-bottom:1px solid var(--ink);position:sticky;top:var(--style-bar-h,0px);background:var(--paper);z-index:5}
 header .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
-.mark{font:600 20px Fraunces,serif;text-decoration:none;letter-spacing:-.01em}
+.mark{font:700 24px Fraunces,serif;text-decoration:none;letter-spacing:-.01em}
 .mark span{color:var(--accent)}
 nav a{font-size:14px;text-decoration:none;margin-left:22px;color:var(--muted)}
 nav a:hover{color:var(--accent)}
 .hero{padding:96px 0 72px;border-bottom:1px solid var(--rule)}
 .kicker{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600}
-h1{font:800 clamp(44px,8vw,104px)/0.98 Fraunces,serif;letter-spacing:-.03em;margin:18px 0 28px}
-h1 em{font-weight:300;font-style:italic}
+h1{font:800 clamp(52px,10vw,136px)/0.95 Fraunces,serif;letter-spacing:-.035em;margin:16px 0 22px}
+h1 .dot{color:var(--accent)}
+.tagline{font:300 clamp(26px,3.6vw,44px)/1.15 Fraunces,serif;letter-spacing:-.015em;margin:0 0 26px;max-width:900px}
+.tagline em{font-style:italic;color:var(--accent)}
 .lede{max-width:640px;font-size:20px;color:var(--muted)}
 .hero .cta{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap}
 .btn{display:inline-block;padding:13px 22px;border:1px solid var(--ink);text-decoration:none;font-weight:600;font-size:15px}
@@ -68,7 +70,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 <div class="wrap">
 <div class="hero">
   <div class="kicker">Administrator / Developer · Solutions</div>
-  <h1>The need for quality improvement is <em>a constant.</em></h1>
+  <h1>Eric E. Jennings<span class="dot">.</span></h1>
+  <p class="tagline">The need for quality improvement is <em>a constant.</em></p>
   <p class="lede">A rare combination of technology and sales — someone who can develop and maintain supporting software while delivering solutions to real business needs.</p>
   <div class="cta"><a class="btn solid" href="#contact">Get in touch</a><a class="btn" href="https://ejennin.github.io/EJPage/EJbTr.pdf">Download résumé</a></div>
 </div>
