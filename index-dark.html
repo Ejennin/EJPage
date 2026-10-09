@@ -21,7 +21,7 @@ header{position:sticky;top:12px;z-index:5;margin:12px auto 0;max-width:1180px;pa
 .bento{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin:28px 0}
 .c{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:26px;position:relative;overflow:hidden}
 .c h2{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-family:"JetBrains Mono",monospace;font-weight:400;margin-bottom:14px}
-.hero{grid-column:span 4;grid-row:span 2;display:flex;flex-direction:column;justify-content:flex-end;min-height:420px}
+.hero{grid-column:span 4;grid-row:span 2;padding-top:64px;display:flex;flex-direction:column;justify-content:flex-end;min-height:420px}
 .status{position:absolute;top:24px;left:26px;font-size:12px;color:var(--lime)}
 .status:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--lime);margin-right:8px;box-shadow:0 0 12px var(--lime)}
 h1{font-size:clamp(40px,6vw,76px);line-height:1;letter-spacing:-.035em;font-weight:700}
@@ -71,6 +71,7 @@ footer a:hover{color:var(--lime)}
 @media(max-width:900px){.bento{grid-template-columns:1fr 1fr}.hero,.about,.stats,.contact{grid-column:span 2}.me,.cta,.proj,.job,.edu{grid-column:span 1}.about .cols,.contact{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.bento{grid-template-columns:1fr}.hero,.about,.stats,.contact,.me,.cta,.proj,.job,.edu{grid-column:span 1}.bar nav{display:none}.hero{min-height:360px}}
 </style>
+<script src="style-switcher.js" defer></script>
 </head>
 <body>
 <header><div class="bar"><b>EJ<i>_</i></b><nav class="mono"><a href="#about">about</a><a href="#projects">projects</a><a href="#experience">experience</a><a href="#education">education</a><a href="#contact">contact</a></nav></div></header>
