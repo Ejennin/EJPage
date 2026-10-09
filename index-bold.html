@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eric E. Jennings — Technology × Sales</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1f3fff;--yellow:#ffd23f;--pink:#ff6b9a;--ink:#111;--white:#fff;--soft:#f2f2ee}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:400 17px/1.55 Archivo,system-ui,sans-serif;color:var(--ink);background:var(--white)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+header{background:var(--blue);color:var(--white)}
+.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:2px solid rgba(255,255,255,.25)}
+.top b{font-weight:900;font-size:20px;letter-spacing:-.02em}
+.top nav a{font-weight:500;font-size:15px;margin-left:24px}
+.top nav a:hover{color:var(--yellow)}
+.hero{display:grid;grid-template-columns:1.6fr 1fr;gap:40px;padding:72px 0 88px;align-items:end}
+h1{font-weight:900;font-size:clamp(32px,6.2vw,84px);line-height:.9;letter-spacing:-.05em;text-transform:uppercase}
+h1 .y{color:var(--yellow)}
+.hero aside{border-left:3px solid var(--yellow);padding-left:22px}
+.hero aside .tag{display:inline-block;background:var(--yellow);color:var(--ink);font-weight:700;font-size:13px;padding:4px 10px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+.hero aside p{font-size:19px}
+.btns{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
+.btn{font-weight:700;padding:14px 20px;border:2px solid var(--ink);background:var(--yellow);color:var(--ink);box-shadow:4px 4px 0 var(--ink);transition:.15s;display:inline-block;cursor:pointer;font-size:15px}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn.w{background:var(--white)}
+.marquee{background:var(--ink);color:var(--white);overflow:hidden;white-space:nowrap;padding:14px 0;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.marquee span{display:inline-block;animation:m 28s linear infinite}
+.marquee i{color:var(--yellow);font-style:normal;margin:0 18px}
+@keyframes m{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.marquee span{animation:none}}
+section{padding:96px 0}
+.label{font-weight:900;font-size:clamp(36px,5vw,64px);letter-spacing:-.04em;line-height:1;text-transform:uppercase;margin-bottom:40px;display:flex;gap:18px;align-items:baseline}
+.label small{font-size:16px;color:var(--blue);letter-spacing:0}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.about .q{font-size:30px;font-weight:700;line-height:1.2;letter-spacing:-.02em}
+.about .q mark{background:var(--yellow);padding:0 4px}
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.step{background:var(--soft);padding:20px;border-top:4px solid var(--blue)}
+.step b{display:block;font-size:30px;font-weight:900;color:var(--blue);line-height:1}
+.projects{background:var(--soft)}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.p{background:var(--white);border:2px solid var(--ink);transition:.15s;display:block}
+.p:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--blue)}
+.p img{width:100%;height:190px;object-fit:cover;border-bottom:2px solid var(--ink);display:block}
+.p div{padding:18px}
+.p h3{font-size:22px;font-weight:900;letter-spacing:-.02em}
+.p .t{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--blue)}
+.p p{font-size:15px;color:#444;margin-top:4px}
+.tl{border-left:3px solid var(--ink);margin-left:8px}
+.job{padding:0 0 48px 36px;position:relative}
+.job:before{content:"";position:absolute;left:-11px;top:4px;width:19px;height:19px;background:var(--yellow);border:3px solid var(--ink);border-radius:50%}
+.job h3{font-size:30px;font-weight:900;letter-spacing:-.03em;line-height:1.1}
+.job .role{font-weight:700;color:var(--blue);margin:6px 0 14px}
+.job .body{display:grid;grid-template-columns:1.4fr 1fr;gap:28px}
+.job ul{padding-left:18px}.job li{margin:4px 0}
+.big{background:var(--blue);color:var(--white);padding:20px;align-self:start}
+.big b{display:block;font-size:44px;font-weight:900;letter-spacing:-.04em;line-height:1;color:var(--yellow)}
+.edu{background:var(--yellow)}
+.egrid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:2px solid var(--ink)}
+.e{padding:24px;border-right:2px solid var(--ink);background:var(--yellow)}
+.e:last-child{border-right:0}
+.e .loc{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.e h3{font-size:21px;font-weight:900;line-height:1.1;margin:8px 0;letter-spacing:-.02em}
+.contact{background:var(--ink);color:var(--white)}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.contact .label{color:var(--white)}.contact .label small{color:var(--yellow)}
+form{display:grid;gap:12px}
+input,textarea{font:inherit;padding:16px;border:2px solid var(--white);background:transparent;color:var(--white);outline:none}
+input::placeholder,textarea::placeholder{color:#aaa}
+input:focus,textarea:focus{border-color:var(--yellow)}
+textarea{min-height:140px;resize:vertical}
+footer{background:var(--ink);color:#aaa;border-top:1px solid #333;padding:24px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a:hover{color:var(--yellow)}
+@media(max-width:900px){.hero,.about,.cgrid,.job .body{grid-template-columns:1fr}.pgrid{grid-template-columns:1fr 1fr}.egrid{grid-template-columns:1fr 1fr}.e:nth-child(2){border-right:0}.e:nth-child(-n+2){border-bottom:2px solid var(--ink)}.top nav{display:none}}
+@media(max-width:600px){.pgrid,.egrid,.steps{grid-template-columns:1fr}.e{border-right:0;border-bottom:2px solid var(--ink)}.e:last-child{border-bottom:0}section{padding:64px 0}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="top"><b>ERIC E. JENNINGS</b><nav><a href="#about">About</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a></nav></div>
+    <div class="hero">
+      <h1>Quality improvement is <span class="y">a constant.</span></h1>
+      <aside>
+        <span class="tag">Administrator / Developer</span>
+        <p>A rare combination of technology and sales — building and maintaining the software that solves real business needs.</p>
+        <div class="btns"><a class="btn" href="#contact">Let's talk</a><a class="btn w" href="https://ejennin.github.io/EJPage/EJbTr.pdf">Résumé ↓</a></div>
+      </aside>
+    </div>
+  </div>
+</header>
+<div class="marquee"><span>Salesforce<i>✦</i>C# MVC<i>✦</i>QA &amp; UAT<i>✦</i>Regex<i>✦</i>Agile / Scrum<i>✦</i>Account Management<i>✦</i>Lean Six Sigma<i>✦</i>Salesforce<i>✦</i>C# MVC<i>✦</i>QA &amp; UAT<i>✦</i>Regex<i>✦</i>Agile / Scrum<i>✦</i>Account Management<i>✦</i>Lean Six Sigma<i>✦</i></span></div>
+
+<section id="about"><div class="wrap">
+  <div class="label">About <small>Business Technology Analyst</small></div>
+  <div class="about">
+    <div>
+      <p class="q">Adapts to change without waiting on anyone. States opinions freely — and <mark>changes his mind</mark> when a better idea comes along.</p>
+      <p style="margin-top:20px">When faced with a problem, Eric isn't content to let it linger. Here's how he works it:</p>
+    </div>
+    <div class="steps">
+      <div class="step"><b>01</b>Assess the contributing factors</div>
+      <div class="step"><b>02</b>Develop options to resolve or improve</div>
+      <div class="step"><b>03</b>Weigh each option's fit and impact</div>
+      <div class="step"><b>04</b>Inform others and put the steps in place</div>
+    </div>
+  </div>
+</div></section>
+
+<section id="projects" class="projects"><div class="wrap">
+  <div class="label">Projects <small>Code &amp; Salesforce builds</small></div>
+  <div class="pgrid">
+    <a class="p" href="https://github.com/Ejennin/BlueBadgeProject-1"><img src="https://ejennin.github.io/EJPage/PokeTrack.PNG" alt=""><div><span class="t">C# MVC</span><h3>PokeTrack</h3><p>An app to manage all your Pokémon.</p></div></a>
+    <a class="p" href="https://github.com/Ejennin/SalesBlitz"><img src="https://ejennin.github.io/EJPage/SalesBlitz.png" alt=""><div><span class="t">C#</span><h3>SalesBlitz</h3><p>Organizes mass face-to-face call events, using groups to grow each rep's funnel.</p></div></a>
+    <a class="p" href="https://trailblazer.me/id/ejennings7"><img src="https://ejennin.github.io/EJPage/SalesForce.png" alt=""><div><span class="t">Salesforce</span><h3>Application Dashboards</h3><p>Built on Trailhead.</p></div></a>
+    <a class="p" href="https://trailblazer.me/id/ejennings7"><img src="https://ejennin.github.io/EJPage/Dreamhouse.png" alt=""><div><span class="t">Salesforce</span><h3>Dream House</h3><p>Built on Trailhead.</p></div></a>
+    <a class="p" href="https://trailblazer.me/id/ejennings7"><img src="https://ejennin.github.io/EJPage/Easy%20Space.png" alt=""><div><span class="t">Salesforce</span><h3>Easy Space</h3><p>Built on Trailhead.</p></div></a>
+    <a class="p" href="https://trailblazer.me/id/ejennings7"><img src="https://ejennin.github.io/EJPage/SalesForce.png" alt=""><div><span class="t">Salesforce</span><h3>API Property &amp; Function</h3><p>Parent-to-child component communication.</p></div></a>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <div class="label">Experience <small>Tech · Finance · Sales</small></div>
+  <div class="tl">
+    <div class="job"><h3>Xome · Assurant · StreetLinks</h3><div class="role">Quality Exam Sr. Associate · Rule Development Specialist</div>
+      <div class="body"><ul><li>System, functional, integration, regression, audit and UAT testing</li><li>Analyzed, designed, built, tested and maintained rules for an automated document-quality review system</li><li>Regex and pseudo-code to improve system efficiency</li><li>Defined UAT scope; wrote QA and test plans</li><li>Agile/Scrum with Jira &amp; Confluence; sandbox and production deployments</li><li>Trained Rule Specialists and Quality Analysts</li></ul>
+      <div class="big"><b>White Belt</b>Lean Six Sigma certified</div></div></div>
+    <div class="job"><h3>JPMorgan Chase</h3><div class="role">Equity Sales Specialist &amp; Personal Banker</div>
+      <div class="body"><ul><li>Home-loan sales and underwriting with approval authority up to $250,000</li><li>Underwriting quality and accuracy above 95%</li></ul>
+      <div class="big"><b>$4M+</b>per month in bookings — above goal</div></div></div>
+    <div class="job"><h3>Federal Express</h3><div class="role">International &amp; Sr. Corporate Account Manager</div>
+      <div class="body"><ul><li>Sales, retention and contract negotiation for major accounts</li><li>Consulted on and implemented automated logistics systems</li><li>Coached and mentored 13 sales reps across 3 states</li><li>Designed and led training programs; developed industry seminars</li><li>Led sponsorship and fundraising for community service events</li></ul>
+      <div class="big"><b>75→102%</b>international account base (domestic 91→109%)</div></div></div>
+  </div>
+</div></section>
+
+<section id="education" class="edu"><div class="wrap">
+  <div class="label">Education</div>
+  <div class="egrid">
+    <div class="e"><span class="loc">Muncie, IN</span><h3>Ball State University</h3><p>B.S. Telecommunications, minor in Business Administration</p></div>
+    <div class="e"><span class="loc">South Bend, IN</span><h3>University of Notre Dame</h3><p>Summer session, general studies</p></div>
+    <div class="e"><span class="loc">Indianapolis, IN</span><h3>Eleven Fifty — Gold Badge</h3><p>4-week software dev intensive: HTML/CSS, C#, Git &amp; GitHub, portfolio.</p></div>
+    <div class="e"><span class="loc">Indianapolis, IN</span><h3>Eleven Fifty — White Badge</h3><p>3-day web design: HTML/CSS, responsive design, CSS frameworks.</p></div>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap cgrid">
+  <div class="label">Contact <small>Say hello</small></div>
+  <form action="https://formspree.io/xaypqeeg" method="POST">
+    <input name="name" placeholder="Your name" required>
+    <input type="email" name="email" placeholder="Your email" required>
+    <textarea name="message" placeholder="Message" required></textarea>
+    <button class="btn" type="submit" style="justify-self:start">Send message →</button>
+  </form>
+</div></section>
+<footer><div class="wrap"><span>© 2026 Eric E. Jennings</span><span><a href="https://github.com/Ejennin">GitHub</a> · <a href="https://trailblazer.me/id/ejennings7">Trailhead</a> · <a href="https://www.linkedin.com/in/eric-e-jennings">LinkedIn</a></span></div></footer>
+</body>
+</html>
